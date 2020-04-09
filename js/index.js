@@ -1,5 +1,5 @@
 const numbers = document.querySelectorAll('.number'),
-operations = document.querySelectorAll('.operation'),
+operations = document.querySelectorAll('.operation');
 decimalBtn = document.getElementById('decimal'),
 clearBtns = document.querySelectorAll('.clear-btn'),
 display = document.getElementById('display'),
@@ -27,6 +27,7 @@ for (let i = 0; i < clearBtns.length; i++) {
         clear(e.srcElement.id)
     });
 };
+
 
 decimalBtn.addEventListener('click', decimal);
 
@@ -67,6 +68,7 @@ function operation(op) {
 
 function decimal() {
     let localDecimalMemory = display.value;
+
     if (MemoryNewNumber) {
         localDecimalMemory = '0.';
         MemoryNewNumber = false;
@@ -89,3 +91,5 @@ function clear(id) {
         MemoryPendingOperation = ''; 
     };
 };
+
+
